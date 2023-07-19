@@ -1,0 +1,180 @@
+/* PC */
+@media (min-width: 64em) {
+    
+}
+
+/* Tablet & Mobile */
+
+@media (max-width: 63.9375em) {
+
+    .tickets-buy-list .tickets-buy-btn {
+        padding: 15px 16px;
+    }
+
+    .form-control {
+        padding: 15px 8px;
+    }
+
+    .send-btn {
+        padding: 15px 16px;
+    }
+
+    .modal .modal-body {
+        font-size: 18px;
+    }
+
+    .modal .modal-input {
+        padding: 15px;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+
+    /* Content */
+    .contact-address-large {
+        line-height: 2;
+
+    }
+
+
+    .footer-icon {
+        font-size: 48px;
+        margin: 0 8px;
+    }
+
+    .footer-medium {
+        font-size: 24px;
+        margin-top: 32px;
+    }
+
+    .footer-medium a {
+        padding: 28px 0;
+    }
+
+    #navigation .subnavigation li a {
+        padding: 5px 12px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+
+    /* Header */
+    #header {
+        overflow: hidden;
+    }
+
+    #header .header-mobile-menu {
+        display: block;
+    }
+
+    #header .header-search {
+        display: none;
+    }
+
+
+
+    #navigation {
+        display: block;
+    }
+
+    #navigation > li {
+        display: block;
+    }
+
+    #navigation > li:first-child {
+        display: inline-block;
+    }
+
+    #navigation li a {
+        padding: 1px 24px;
+    }
+
+    #navigation .subnavigation {
+        position: initial;
+        background-color: rgb(41, 41, 41);
+
+    }
+
+    #navigation .subnavigation li a {
+        color: #fff;
+        padding: 5px 40px;
+    }
+
+    /* Slider */
+    #slider .slider-text {
+        padding-bottom: 8px;
+        display: none;
+    }
+
+    /* Content */
+
+    /* Band */
+    #content .member-list .member-item {
+        width: 100%;
+    }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    .s-col-third {
+        width: 100%;
+    }
+
+    .tickets-buy-list .tickets-buy {
+        margin-bottom: 16px;
+    }
+
+    /* Tour */
+    .tickets-buy-list .tickets-buy-btn {
+        width: 100%;
+    }
+
+
+    /* Contact */
+    .s-col-half {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-address-feedback {
+        margin-top: 32px;
+    }
+
+    .form-control {
+        margin: 6px 0;
+        font-size: 18px;
+    }
+
+    .row-input-name-mess {
+        margin: 0;
+        width: 100%;
+    }
+
+    .send-btn {
+        width: 100%;
+    }
+
+    
+
+    /* Footer */
+    .footer-icon {
+        font-size: 32px;
+        margin: 0 8px;
+    }
+
+    .footer-medium {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .footer-medium a {
+        padding: 16px 0;
+    }
+
+}
+

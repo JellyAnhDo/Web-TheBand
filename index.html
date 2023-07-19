@@ -3,12 +3,13 @@
     <head>
         <title>The Band</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="/WebTheBand/assets/image/favicon/favicon-32x32.png"/>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/Font/themify-icons/themify-icons.css">
-<!-- CSS only -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
-    </head>
 
+    </head> 
     <body>
         <div id="main">
             <div id="header">
@@ -16,22 +17,30 @@
                 <!-- begin: nav -->
 
                 <ul id="navigation">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Band</a></li>
-                    <li><a href="">Tour</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#band">Band</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">
                         More
                         <i class="navigation-arrow-down ti-angle-down"></i>
                     </a>
                         <ul class="subnavigation">
-                            <li><a href="">Merchandise</a></li>
-                            <li><a href="">Extras</a></li>
-                            <li><a href="">Media</a></li>
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
                         </ul>
                     </li>
                 </ul>
                 <!-- End: nav-->
+
+                <!-- Begin: mobile-menu-->
+
+                <div id="mobile-menu" class="header-mobile-menu">
+                    <i class="mobile-menu-icon ti-menu"></i>
+
+                </div>
+                <!-- End: mobile menu-->
 
                 <!-- Begin: header search-->
 
@@ -41,11 +50,13 @@
                 </div>
                 <!-- End: header search-->
 
+
+
                 
             </div>
             
             <div id="slider">
-                <div class="slider-text">
+                <div class="text-center slider-text">
                     <h2 class="text-heading">New York</h2>
                     <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
                     
@@ -55,24 +66,24 @@
             <div id="content">
 
                 <!--Begin: The Band section-->
-                <div class="content-section">
+                <div id="band" class="content-section">
                     <h2 class="section-heading">THE BAND</h2>
                     <p class="section-description">We love music</p>
                     <p class="about-heading">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="member-list">
-                        <div class="member-item">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="assets/image/Content/Member-img/bandmember.jpg" alt="Random Name" class="member-img">
 
                         </div>
 
-                        <div class="member-item">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="assets/image/Content/Member-img/bandmember.jpg" alt="Random Name" class="member-img">
 
                         </div>
 
-                        <div class="member-item">
+                        <div class="member-item col col-third text-center">
                             <p class="member-name">Name</p>
                             <img src="assets/image/Content/Member-img/bandmember.jpg" alt="Random Name" class="member-img">
 
@@ -87,7 +98,7 @@
                 <!--End: The Band section-->
 
                 <!--Begin: Tour section-->
-                <div class="tour-section">
+                <div id="tour" class="tour-section">
                     <div class="content-section">
                         <h2 class="section-heading">TOUR DATES</h2>
                         <p class="section-description">Remember to book your tickets!</p>
@@ -108,8 +119,9 @@
     
                             </li>
                         </ul>
+
                         <div class="tickets-buy-list">
-                            <div class="tickets-buy">
+                            <div class="col col-third plr-8 s-col-third tickets-buy">
                                 <img src="assets/image/Content/Tickets-img/newyork.jpg" alt="New York" class="tickets-img">
                                 <div class="tickets-content">
                                     <p class="tickets-location">New York</p>
@@ -119,7 +131,7 @@
                                 </div>
                             </div>
 
-                            <div class="tickets-buy">
+                            <div class="col col-third plr-8 s-col-third tickets-buy">
                                 <img src="assets/image/Content/Tickets-img/paris.jpg" alt="Paris" class="tickets-img">
                                 <div class="tickets-content">
                                     <p class="tickets-location">Paris</p>
@@ -130,7 +142,7 @@
                                 </div>
                             </div>
 
-                            <div class="tickets-buy">
+                            <div class="col col-third plr-8 s-col-third tickets-buy">
                                 <img src="assets/image/Content/Tickets-img/sanfran.jpg" alt="San Francisco" class="tickets-img">
                                 <div class="tickets-content">
                                     <p class="tickets-location">San Francisco</p>
@@ -154,33 +166,48 @@
                 <!--End: Tour section-->
 
                 <!--Begin: Contact section-->
-                <div class="contact-section">
+                <div id="contact" class="content-section">
                     <h2 class="section-heading">CONTACT</h2>
                     <p class="section-description">Fan? Drop a note!</p>
                     <div class="contact-address">
-                        <div class="contact-address-large">
-                            <i class="ti-location-pin"></i>
+                        <div class="col-half s-col-half contact-address-large">
+                            <i class="ti-location-pin line-height"></i>
                             Chicago, US
+
                             <br>
 
-                            <i class="ti-mobile"></i>
-                            Phone: +00 151515
+                            <i class="ti-mobile line-height"></i>
+                            Phone: <a href="tel:+00 151515">+00 151515</a>
+
                             <br>
 
-                            <i class="ti-email"></i>
-                            Email: mail@mail.com
+                            <i class="ti-email line-height"></i>
+                            Email: <a href="mailto:mail@mail.com">mail@mail.com</a>
                             <br>
 
                         </div>
-                        <div class="contact-address-feedback">
-                            <input type="text" class="contact-feedback" placeholder="Name">
-                            <input type="text" class="contact-feedback" placeholder="Email">
-                            <br>
+                        <div class="col-half s-col-half contact-address-feedback">
+                            <div class="contact-feedback">
+                                <form action="">
+                                    <div class="row-input-send">
+                                        <div class="col row-input-name-mess">
+                                            <div class="row col col-half s-col-half">
+                                                <input type="text" name="" id="" placeholder="Name" required class="form-control">
 
-                            <input type="text" class="contact-feedback" placeholder="Message">
-                            <br>
+                                            </div>
+                                            <div class="row col col-half s-col-half">
+                                                <input type="text" name="" id="" placeholder="Email" required class="form-control">
 
-                            <button class="feedback-send">Send</button>
+                                            </div>
+                                            
+                                           
+                                        </div>
+                                        <div class="col col-full">
+                                            <input type="text" name="" id="" placeholder="Message" required class="form-control">
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="send-btn" value="SEND">
+                                </form>
                         </div>
                     </div>
 
@@ -194,14 +221,25 @@
 
 
                 <!--Begin: Map section-->
-                <div class="map-section">
-                    <h2 class="section-heading">MAP</h2>
+                <div class="text-center map-section">
                     <img src="assets/image/Content/Map/map.jpg" alt="Map" class="map-img">
 
                 </div>
 
                 <!--End: Map section-->
             <div id="footer">
+                <div class="text-center footer">
+                    <i class="ti-facebook footer-icon"></i>
+                    <i class="ti-instagram footer-icon"></i>
+                    <i class="ti-github footer-icon"></i>
+                    <i class="ti-pinterest footer-icon"></i>
+                    <i class="ti-twitter footer-icon"></i>
+                    <i class="ti-linkedin footer-icon"></i>
+                    <p class="text-center footer-medium">
+                        Powered by
+                        <a href="https://www.facebook.com/dohoanganh0202" target="_blank">Hoang Anh</a>
+                    </p>
+                </div>
                 
             </div>
         </div>
@@ -266,7 +304,7 @@
     </body>
 
     <!-- JavaScript Bundle with Popper -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+
 <script>
     const buyBtns = document.querySelectorAll('.js-tickets-buy-btn')
     const modal = document.querySelector('.js-modal')
@@ -304,6 +342,76 @@
     modalContainer.addEventListener('click', function (event) {
         event.stopPropagation()
     })
+
+
+
+    // function sendEmail()
+    // {
+    //     var name = document.getElementById('nameValue').value;
+    //     var email = document.getElementById('emailValue').value;
+    //     var message = document.getElementById('messageValue').value;
+
+
+    //     if (name == '') {
+    //         document.getElementById('name').classList.remove("d-none")
+    //         return;
+    //     } else {
+    //         document.getElementById('name').classList.add("d-none")
+    //     }
+
+    //     if (!console.log(validateEmail(email))) {
+    //         document.getElementById('email').classList.remove("d-none")
+    //         return;
+    //     } else {
+    //         document.getElementById('email').classList.add("d-none")
+    //     }
+
+    //     if (message == '') {
+    //         document.getElementById('message').classList.remove("d-none")
+    //         return;
+    //     } else {
+    //         document.getElementById('message').classList.add("d-none")
+    //     }
+
+    //     document.getElementById("show-name").innerText = name +" "+ email +" " + message
+
+
+
+    // }
+
+    // Mobile responsive
+    var header = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var headerHeight = header.clientHeight;
+
+    //lắng nghe sự kiện click vào mobile menu (đóng/mở)
+    mobileMenu.addEventListener('click', function () {
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+                    header.style.height = 'auto';
+                } else {
+                    header.style.height = null;
+                }
+        });
+
+    //Lắng nghe sự kiện khi click vào các phần tử của menu thì tự động đóng menu
+    var menuItems = document.querySelectorAll('#navigation li a[href*="#"]');
+    for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        menuItem.addEventListener('click', function () {
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnavigation');    //Kiểm tra thẻ click vào nếu là thẻ li có thể con vs class là ul thì gán isParentmenu = true (có thẻ con)
+            if (isParentMenu) {
+                event.preventDefault();     //preventDefault bỏ qua hành vi mặc định
+
+            } else {
+                header.style.height = null;
+            }
+        });
+    }
+
+    //Lắng nghe sự kiện khi click vào more thì không đóng menu và hiển thị subnav
+
+
 
 </script>
 </html>
