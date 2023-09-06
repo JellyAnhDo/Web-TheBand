@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/toast-msg.css">
+    <link rel="stylesheet" href="./css/BEM.css">
+</head>
+<body>
+    <div id="toast">
+        </div>
+    </div>
+
+    <div>
+        <button onclick="showSuccessToast()" class="btn btn--success btn--size-s">Show success</button>
+        
+        <button onclick="showErrorToast()" class="btn btn--danger btn--size-s">TRY AGAIN</button>
+    </div>
+
+    <script>
+        function toast({
+            // Khoi tao gia tri ban dau cua cac bien
+            title = '', 
+            message = '', 
+            type = 'info', 
+            duration = 3000
+        }) {
+            const main = document.getElementById('toast');
+            const icons = {
+                success: `fa-solid fa-circle-check`,
+                infor: `fa-solid fa-circle-info`,
+                danger: `fa-solid fa-circle-exclamation`,
+                error: `fa-solid fa-circle-exclamation`,
+
+            };
+
+            const icon = icons[type];
+            const delay = (duration / 1000).toFixed(2);
+            if(main) {
+                const toast = document.createElement('div');
+
+                // auto remove toast
+                const autoRemoveId = setTimeout(function() {
+                    main.removeChild(toast);
+                }, duration + 1000);
+
+                // remove toast when click icon close
+                toast.onclick = function(e) {
+                    if(e.target.closest('.toast__close')){
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoveId);
+                    }
+                }
+                toast.classList.add('toast', `toast--${type}`);
+                toast.style.animation = `slideInLeft ease-in 0.3s, slideInOut linear 1s ${delay}s forwards`;
+                toast.innerHTML = `
+                    <div class="toast__icon">
+                        <i class="${icon}"></i>
+                    </div>
+                    <div class="toast__body">
+                        <h2 class="toast__title">${title}</h2>
+                        <p class="toast__msg">${message}</p>
+                    </div>
+                    <div class="toast__close">
+                        <i class="fa-solid fa-xmark"></i>
+                `;
+                main.append(toast);
+
+            }
+        }
+
+        function showSuccessToast() {
+            toast({
+            title: 'Success',
+            message:'You have successfully created a new post.',
+            type:'success',
+            duration: 5000
+        });
+        }
+
+        function showErrorToast() {
+            toast({
+            title: 'Error',
+            message:'Error.',
+            type:'error',
+            duration: 5000
+        });
+        }
+        
+    </script>
+</body>
+</html>
